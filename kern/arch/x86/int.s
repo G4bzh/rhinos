@@ -192,7 +192,7 @@ extern	syscall_handle
    	call	save_ctx
 	push	%1
  	call	irq_handle_flih
-	add	esp,8
+	add	esp,4
 	mov	al,IRQ_EOI
 	out	IRQ_MASTER,al
 	call	restore_ctx
@@ -213,7 +213,7 @@ extern	syscall_handle
 	call	save_ctx
 	push	%1
 	call	irq_handle_flih
-	add	esp,8
+	add	esp,4
 	mov	al,IRQ_EOI
 	out	IRQ_SLAVE,al
 	out	IRQ_MASTER,al
