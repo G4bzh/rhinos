@@ -151,7 +151,7 @@ static struct interval_tree tree_pool[MULTIBOOT_MMAP_MAX] __attribute__((section
 
    Create a sanitized and sorted e820 memory map
    First, it relocates the multiboot memory map in a controlled area.
-   Then the relocated memory map is sanitized and truncate to 4GB
+   Then the relocated memory map is sanitized and truncated to 4GB
 
 **/
 
@@ -268,7 +268,7 @@ PUBLIC u8_t e820_setup(struct multiboot_info* bootinfo)
    Create a memory map partition for reverse quick sorting mmap according to its `type`.
    Partition is based on a pivot element `type` which is the last element for ease of programming.
 
-   The partition process result in a memeory map partition where all elements before the pivot have
+   The partition process result in a memory map partition where all elements before the pivot have
    a greater `type`and all element after have a smaller `type`.
 
    It returns the pivot index in the memory map.
